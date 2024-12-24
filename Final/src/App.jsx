@@ -1,8 +1,15 @@
 import React from 'react'
+import './App.css';
+import Header from './components/header/Header';
+import Signup from './components/login/SignUp';
 
-function App() {
+const App = () => {
   return (
-    <div>Final</div>
+    <div>
+      <Header>
+        <Signup />
+      </Header>
+    </div>
   )
 }
 

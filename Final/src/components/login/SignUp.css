@@ -1,0 +1,116 @@
+.auth {
+  margin: 5rem auto;
+  width: 95%;
+  max-width: 25rem;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  padding-bottom: 4rem;
+}
+
+.submit {
+  margin: 5rem auto;
+  width: 95%;
+  max-width: 25rem;
+  border-radius: 6px;
+  background-color: rgb(171, 236, 202);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1.8rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.control input:focus {
+  border-color: blue; /* Change border color on focus */
+  font-size: 1.8rem;
+  background-color: rgb(198, 198, 240);
+}
+
+.auth h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: black;
+}
+
+.control {
+  margin-bottom: 0.5rem;
+}
+
+.control label {
+  display: block;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  padding-top: 1rem;
+}
+
+.control input {
+  font: inherit;
+  font-size: 1.2rem;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border-radius: 4px;
+  border: 1px solid black;
+  width: 100%;
+  text-align: left;
+  padding: 0.25rem;
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions button {
+  cursor: pointer;
+  font: inherit;
+  color: white;
+  background-color: blue;
+  border: 1px solid #9f5ccc;
+  border-radius: 4px;
+  padding: 0.5rem 2.5rem;
+}
+
+
+.actions button:hover {
+  background-color: rgba(0, 0, 255, 0.384);
+  border-color: blue;
+}
+
+.actions .toggle {
+  margin-top: 1rem;
+  background-color: transparent;
+  color: black;
+  font-size: 1rem;
+  border: none;
+  padding: 0.15rem 1.5rem;
+}
+
+.actions .toggle:hover {
+  background-color: transparent;
+  color: #361ec0a6;
+}
+
+.submit .toggle {
+  background: none;
+  border: none;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 0;
+}
+
+.submit .toggle:hover {
+  color: darkblue;
+}

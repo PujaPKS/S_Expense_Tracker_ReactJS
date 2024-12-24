@@ -1,8 +1,12 @@
-# React + Vite
+Deliverables
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Create the signup screen like this - https://drive.google.com/file/d/1VlQsBXuQux-aDpp2gqud_K0xlnJAap69/view?usp=sharing so that new users can signup
+Only take Email , password and confirm password. All fields are mandatory. Dont let users submit uptill they dont fill everything.
+Use google firebase authentication like the way you did before. New user should be successfuly created so he can login from here on.
+Handle errors appropriately and show them to the users like the way you did before.
+Once the user has successful registered , console log - User has successfully signed up.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+Any idea where these signed users get saved in firebase? Watch this video(https://www.youtube.com/watch?v=Mf9mt_Wp94Uhttps://www.youtube.com/watch?v=Mf9mt_Wp94U) to figure out.
