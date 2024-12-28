@@ -11,6 +11,8 @@ body {
     right: 0;
     height: 1200px;
     width: 800px;
+    /* background: #38015c; */
+    /* clip-path: ellipse(75% 50% at 100% 0%); */
     z-index: -1;
   }
   
