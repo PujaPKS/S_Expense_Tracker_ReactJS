@@ -9,15 +9,15 @@ const AuthProvider = (props) => {
     const loginHandler = (token) =>{
         console.log('User logged in with token: ', token); // for debugging purposes
         setToken(token); // update the token state to the particular token passed to this function
-        localStorage.setItem('idToken', token); // stores the token in local storage so that on refresh of the page it can be accessed
+        localStorage.setItem('idToken', token); // stores the token in local storage so that on refresh of page it can be accessed
     }
 
     const logoutHandler = () => {
         console.log('User logged out'); // for debugging purposes
         setToken(null); // cleared token that is set token to null to logout
-        localStorage.removeItem('idToken'); // removes the token from local storage so that on refresh of th
+        localStorage.removeItem('idToken'); // Cleared the idToken from localStorage
     }
-
+      
     const contextValue = {
         token : token ,
         isLoggedIn : userIsLoggedIn ,

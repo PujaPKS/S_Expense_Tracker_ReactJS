@@ -9,14 +9,15 @@ const MainNavigation = () => {
   const authCtx = useContext(AuthContext); // Using the context to get logged-in status
   
   const isLoggedIn = authCtx.isLoggedIn; // Getting the logged-in status from the context 
-  
+
   const navigate = useNavigate(); // Using the navigate function from react-router-dom to navigate between routes
 
+  //Function to handle logout of the user
   const logoutHandler = () => {
-    authCtx.logout(); // Calling the logout function from the context to logout the user
+    authCtx.logout(); // Calling the logout function from AuthContext
     navigate('/'); // Navigating to the root route after logging out
   }
-
+  
   return (
     <header className='header'>
       <Link to='/'>
@@ -45,7 +46,7 @@ const MainNavigation = () => {
 
           {isLoggedIn &&(
             <li>
-              <button onClick={logoutHandler} to='/logout'>Logout</button>
+              <button onClick={logoutHandler} className='logout'>Logout</button>
             </li>
           )}
           
