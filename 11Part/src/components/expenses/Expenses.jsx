@@ -18,6 +18,35 @@ const Expenses = () => {
     const { name, value } = e.target;
     setExpenseInput((prevState) => ({ ...prevState, [name]: value }));
   };
+  
+  
+  // const handleFormSubmission = async (e) => {
+  //   e.preventDefault();
+
+  //   //adding expenses in Database
+  //   try {
+  //     const response = await axios.post(
+  //       "https://expensetracker-8e391-default-rtdb.firebaseio.com/expenses.json",
+  //       expenseInput
+  //     );
+  //     console.log("Document Added:", response);
+  //   } catch (error) {
+  //     console.error(
+  //       "Error Adding Document:",
+  //       error.response?.data || error.message
+  //     );
+  //   }
+
+  //   setExpenseInput({
+  //     price: "",
+  //     expenseTitle: "",
+  //     category: "Expense Category",
+  //   });
+  //   //fetching data from Database function
+  //   fetchDataFromDb();
+  //   setShowForm(false);
+  // };
+
 
   // Handling form submission with async/await and also keeping track of id of expense for updating the expense
   const handleFormSubmission = async (e) => {
@@ -81,6 +110,12 @@ const Expenses = () => {
     setExpenseInput(expenseToEdit); // Setting the form state to the existing expense data
     setShowForm(true); // Showed the form to edit the expense
   };
+
+  // const handleDelete = (id) => {
+  //   setExpenses((prevExpenses) =>
+  //     prevExpenses.filter((expense) => expense.id !== id)
+  //   );
+  // };
 
   // Function for handling delete from Database
   const handleDelete = async (id) => {
