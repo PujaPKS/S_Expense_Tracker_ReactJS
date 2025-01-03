@@ -4,7 +4,7 @@ import "./ExpenseForm.css";
 const ExpenseForm = ({ expenseInput, handleChange, handleFormSubmission, closeForm }) => {
   return (
     <form onSubmit={handleFormSubmission} className="expense-form">
-      
+      {/* <label htmlFor="expenses" className="form-label"> */}
       <label htmlFor="price" className="form-label">
         Expense Amount:
       </label>
@@ -12,29 +12,36 @@ const ExpenseForm = ({ expenseInput, handleChange, handleFormSubmission, closeFo
         type="number"
         id="price"
         name="price"
+        // id="expenses"
+        // name="expense"
+        // value={expenseInput.expense}
         value={expenseInput.price}
         onChange={handleChange}
         placeholder="Expense Amount"
       />
-
+      {/* <label htmlFor="description" className="form-label"> */}
       <label htmlFor="expenseTitle" className="form-label">
         Description:
       </label>
       <input
         type="text"
+        // id="description"
+        // name="desc"
+        // value={expenseInput.desc}
         id="expenseTitle"
         name="expenseTitle"
         value={expenseInput.expenseTitle}
         onChange={handleChange}
         placeholder="About It"
       />
-
       <label htmlFor="category" className="form-label">
         Category:
       </label>
       <select
         id="category"
         name="category"
+        // name="cat"
+        // value={expenseInput.cat}
         value={expenseInput.category}
         onChange={handleChange}
         className="form-select"

@@ -11,6 +11,12 @@ const Expenses = () => {
     expenseTitle: "",
     category: "Expenses Category",
   });
+
+  // const [expenseInput, setExpenseInput] = useState({
+  //   expense: "",
+  //   desc: "",
+  //   cat: "Expenses Category",
+  // });
   
   const totalAmount = expenses.reduce((sum, expense) => sum + Number(expense.price), 0);
 
@@ -36,6 +42,7 @@ const Expenses = () => {
       );
     }
 
+    // setExpenses((prev) => [...prev, expenseInput]);
     setExpenseInput({
       price: "",
       expenseTitle: "",
@@ -45,6 +52,27 @@ const Expenses = () => {
     //fetching data from Database function
     fetchDataFromDb();
 
+  // const handleFormSubmission = (e) => {
+  //   e.preventDefault();
+
+    // const newExpense = {
+    //   id: expenseInput.id || Date.now(),
+    //   ...expenseInput,
+    // };
+
+    // if (expenseInput.id) {
+    //   setExpenses((prevExpenses) =>
+    //     prevExpenses.map((expense) =>
+    //       expense.id === expenseInput.id ? newExpense : expense
+    //     )
+    //   );
+    // }
+    // else {
+    //   setExpenses((prevExpenses) => [...prevExpenses, newExpense]);
+    // }
+
+    // Reseted the form and hidden it
+    // setExpenseInput({ expense: "", desc: "", cat: "Expenses Category" });
     setShowForm(false);
   };
 
@@ -78,6 +106,7 @@ const Expenses = () => {
     }));
 
     setExpenses(expensesArray); // Updated the state with the array
+
     // console.log("response - ", response?.data);
   }
 
