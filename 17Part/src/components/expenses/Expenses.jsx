@@ -18,6 +18,7 @@
 //     const { name, value } = e.target;
 //     setExpenseInput((prevState) => ({ ...prevState, [name]: value }));
 //   };
+  
 
 //   // Handling form submission with async/await and also keeping track of id of expense for updating the expense
 //   const handleFormSubmission = async (e) => {
@@ -151,6 +152,16 @@
 //         Total Amount: <strong>{totalAmount} Rs</strong>
 //       </p>
 
+//       {/* Conditional rendering if price is more than 10000 */}
+//       {/* Conditional Button */}
+//       {totalAmount > 100000 && (
+//         <div className="alert-btn">
+//           <button className="darkMode">
+//             Alert: High Expense Total!
+//           </button>
+//         </div>
+//       )}
+
 //       {showForm && (
 //         <ExpenseForm
 //           expenseInput={expenseInput}
@@ -209,6 +220,10 @@
 // };
 
 // export default Expenses;
+
+
+
+
 
 
 
