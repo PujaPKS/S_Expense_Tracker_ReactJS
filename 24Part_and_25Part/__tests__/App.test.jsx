@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import App from "../App";
+import App from "../src/App";
 
 // Using "describe()" to group related tests together
 describe("Header component", () => {

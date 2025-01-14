@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import SignUp from '../components/login/SignUp'; // Adjust the import according to your file structure
+import SignUp from '../src/components/login/SignUp'; // Adjust the import according to your file structure
 
 describe('SignUp Component', () => {
 

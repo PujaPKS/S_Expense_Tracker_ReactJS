@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import MainNavigation from "../components/header/MainNavigation";
+import MainNavigation from "../src/components/header/MainNavigation";
 import { BrowserRouter } from "react-router-dom";
 
 
