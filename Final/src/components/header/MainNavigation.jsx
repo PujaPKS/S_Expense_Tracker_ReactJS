@@ -35,15 +35,17 @@ const MainNavigation = () => {
           )}
 
           {isLoggedIn && (
-            <li>
+          <div className='headerList'>
+            <button>
               <Link to='/expense'>Expense</Link>
-            </li>
-          )}
+            </button>
+          {/* )}
 
-          {isLoggedIn && (
-            <li>
+          {isLoggedIn && ( */}
+            <button>
               <Link to='/profile'>Profile</Link>
-            </li>
+            </button>
+          </div>
           )}
 
           {isLoggedIn &&(

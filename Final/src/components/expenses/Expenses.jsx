@@ -113,10 +113,6 @@ const Expenses = () => {
   }, [dispatch]);
 
   // // Adding Dark mode theme reducer
-  // const isDarkMode = themeRedux.isDarkMode; // Get the current dark mode state from Redux
-  // const toggleDarkModeHandler = () => {
-  //   dispatch(toggleDarkMode()); // Dispatch the toggleDarkMode action
-  // };
    // handling theme toggle (dark mode)
    const toggleDarkModeHandler = () => {
     dispatch(toggleDarkMode()); // Dispatch the toggleDarkMode action

@@ -1,38 +1,42 @@
-import React, { useContext } from 'react'
+import React, { useContext, Suspense } from 'react';
 import './App.css';
 import Header from './components/header/Header';
-import Signup from './components/login/SignUp';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import Profile from './components/profile/Profile';
-import ForgotPassword from './components/forgotPassword/ForgotPassword';
-import Expenses from './components/expenses/Expenses';
 import AuthContext from './context/AuthContext';
 
-const App = () => {
+// Lazy loading components for code splitting
+const Signup = React.lazy(() => import('./components/login/SignUp'));
+const Profile = React.lazy(() => import('./components/profile/Profile'));
+const ForgotPassword = React.lazy(() => import('./components/forgotPassword/ForgotPassword'));
+const Expenses = React.lazy(() => import('./components/expenses/Expenses'));
 
+const App = () => {
   const authCtx = useContext(AuthContext);
-  
+
   return (
     <div>
       <Header>
-        <Routes>
-          <Route path="/" element={<Signup />} />
-          <Route path='/login' element={<Signup />} />
-          <Route path='/forgot-password' element={<ForgotPassword/>} />
+        {/* Suspense provides a fallback while the lazy-loaded components are being fetched */}
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Signup />} />
+            <Route path="/login" element={<Signup />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
 
-          {/* Protecting url from directly navigating if user is not logged in by using AUthContext and Navigate*/}
-          {/* If any url is typed and user is not logged in then it will be redirected to login page */}
-          <Route path="/profile"
-            element={authCtx.isLoggedIn ? <Profile /> : <Navigate to="/login" />}
-          />
-          {/* Connected Expenses element to the route */}
-          <Route path='/expense' 
-            element={authCtx.isLoggedIn ? <Expenses/> : <Navigate to='/login' />} 
-          />  
-        </Routes>
+            {/* Protecting routes from direct access if the user is not logged in */}
+            <Route
+              path="/profile"
+              element={authCtx.isLoggedIn ? <Profile /> : <Navigate to="/login" />}
+            />
+            <Route
+              path="/expense"
+              element={authCtx.isLoggedIn ? <Expenses /> : <Navigate to="/login" />}
+            />
+          </Routes>
+        </Suspense>
       </Header>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
